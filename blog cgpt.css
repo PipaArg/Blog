@@ -1,0 +1,190 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    background-image: url();
+}
+
+/* Menú superior */
+.header {
+    background-color: #333;
+    padding: 10px 0;
+    text-align: center;
+}
+
+
+.header ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.header ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.header ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.header ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Layout principal */
+#principal {
+    display: flex;
+    width: 1200px;
+    margin: 20px auto;
+}
+
+/* Contenido principal */
+.content {
+    flex: 2;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 90%;
+}
+
+
+.content h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.content img {
+    width: fit-content;
+}
+.content p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Barra lateral */
+.sidebar {
+    flex: 1;
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin-left: 20px;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.sidebar img {
+    width: 70px;
+    border-radius: 50%;
+}
+
+
+.sidebar h2 img {
+    width: 30px;
+
+}
+
+.sidebar h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.sidebar ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Media Queries */
+@media (max-width: 992px) {
+
+    /* Ajuste del contenedor para tabletas y pantallas medianas */
+    #principal {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .content,
+    .sidebar {
+        width: 90%;
+    }
+
+    .header ul li {
+        display: block;
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 600px) {
+
+    /* Ajustes para móviles */
+    #principal {
+        flex-direction: column;
+        /* Cambia a disposición en columna */
+    }
+
+    .content {
+        order: 1;
+        /* Muestra el contenido principal primero */
+    }
+
+    .sidebar {
+        order: 2;
+        /* Muestra la barra lateral debajo del contenido */
+        width: 90%;
+        /* Ajusta el ancho para pantallas pequeñas */
+        margin: 20px 0;
+    }
+
+    .header ul li {
+        display: block;
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .content h1 {
+        font-size: 24px;
+    }
+
+    .content p {
+        font-size: 16px;
+    }
+
+    footer p {
+        font-size: 12px;
+    }
+}
